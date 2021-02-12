@@ -1,0 +1,4 @@
+GloVe/
+encoder/
+__pycache__
+.ipynb_checkpoints/
