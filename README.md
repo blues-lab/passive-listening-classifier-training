@@ -29,4 +29,7 @@ Download deepspeech-0.7.3-models from deepspeech directory. The files that shoul
 └── trie
 ```
 
+## Download + Accessing Colabs
+Copy the model files for the relevant classification system
+https://drive.google.com/drive/folders/1gzlJk7iL88Fpe2OzW7NQI_9iSyIqx39B?usp=sharing
 Download ffc_keras_model and infraset_model.torch from the notebook 
