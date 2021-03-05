@@ -35,4 +35,4 @@ def sample_trigger(text1, text2):
     doc2 = nlp(text2)
     return doc1.similarity(doc2) > .7
 
-compute_train_test_split(sample_trigger)
+# compute_train_test_split(sample_trigger)
