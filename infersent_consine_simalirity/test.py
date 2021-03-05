@@ -26,7 +26,7 @@ def compute_train_test_split(is_trigger):
     print(compute_accuracy(sentences, train_triggers, is_trigger))
 
     print("Compute true positives")
-    print(compute_accuracy(sentences, test_triggers, is_trigger))
+    print(compute_accuracy(test_triggers, train_triggers, is_trigger))
 
 
 
