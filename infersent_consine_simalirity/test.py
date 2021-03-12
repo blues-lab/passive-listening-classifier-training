@@ -7,6 +7,9 @@ with open("samples.txt") as f:
 with open("triggers.txt") as f:
     triggers = f.readlines()
 
+with open("neg_distractors.txt") as f:
+    distractors = f.readlines()
+
 def compute_accuracy(sents, trigs, is_trigger):
     identified_trigger = 0
     random.shuffle(sents)
@@ -27,12 +30,8 @@ def compute_train_test_split(is_trigger):
     print("Compute true positives")
     print(compute_accuracy(test_triggers, train_triggers, is_trigger))
 
-import spacy
-nlp = spacy.load('en_core_web_sm')
+    print("Compute neg distractors rate")
+    print(compute_accuracy(distractors, train_triggers, is_trigger))
 
-def sample_trigger(text1, text2):
-    doc1 = nlp(text1)
-    doc2 = nlp(text2)
-    return doc1.similarity(doc2) > .7
 
 # compute_train_test_split(sample_trigger)
