@@ -167,6 +167,22 @@ def find_two_most_frequent_LOCs(context):
 
 
 
+def all_LOCs_with_frequencies(sentence):
+    """
+    Return the two most frequent locations (LOCs) in string of lowercase sentence(s) along with their frequencies
+    Sample outputs can be:
+        [("New York City", 2), ("London", 1)] or
+        [("Portland", 1)] or
+        []
+    """
+    truecased_sentence = truecase.get_true_case(sentence.lower())
+    LOCs = {}
+    for ent in nlp_wk(truecased_sentence).ents:
+        if ent.label_ == "LOC":
+            LOCs[str(ent)] = LOCs.get(str(ent), 0) + 1
+    if not LOCs:
+        return []
+    return list(LOCs.items())
 
 
 
