@@ -1,3 +1,4 @@
+#
 import spacy
 import truecase
 
@@ -170,7 +171,7 @@ def find_two_most_frequent_LOCs(context):
 
 
 
-with open('most_recent.txt', 'w') as f:
-    for ent in find_two_most_frequent_GPEs(context):
-    #for ent in find_most_recent_LOCs(context):
-        f.write("%s\n" % ent)
+# with open('most_recent.txt', 'w') as f:
+#     for ent in find_two_most_frequent_GPEs(context):
+#     #for ent in find_most_recent_LOCs(context):
+#         f.write("%s\n" % ent)
