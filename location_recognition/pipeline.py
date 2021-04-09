@@ -1,14 +1,18 @@
 from spacy_NER import find_most_recent_LOCs
 from handle_qa_multiple_option import handle_qa
+from remove_pun_and_stopwords import remove_punc
 import spacy
+
 def spacy_token_to_str(spacy_res):
     res = ""
     for i in spacy_res:
         res += str(i)
     return res
+    
 nlp = spacy.load('en_core_web_lg')
 
 def compute_loc(context):
+    context = [remove_punc(text) for text in context]
     locs = find_most_recent_LOCs(context)
     print("Original", context, locs)
     if len(locs) >= 2:
