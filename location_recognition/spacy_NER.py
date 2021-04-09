@@ -2,13 +2,6 @@
 import spacy
 import truecase
 
-with open("context.txt") as f:
-    context = f.readlines()
-
-
-
-
-
 def most_recent_GPE(sentence, nlp):
     """
     Return the most recent Geopolitical Entity (GPE) in string of lowercase sentence(s)
