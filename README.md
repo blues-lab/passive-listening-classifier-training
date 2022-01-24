@@ -1,6 +1,6 @@
 # Assistant Intent Classification
 
-The classifer repo is split into multiple models:
+The classifer repo is split into multiple sub modules:
 - fuzzy_similarity: Tests fuzzy checking of words with text
 - infersent_cosine_similarity: Test trigger similarity via HuggingFace and Infersent
 - location_recognition: Location recognition for weather
