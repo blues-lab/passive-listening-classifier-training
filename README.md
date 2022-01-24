@@ -1,4 +1,13 @@
 # Assistant Intent Classification
+
+The classifer repo is split into multiple models:
+- fuzzy_similarity: Tests fuzzy checking of words with text
+- infersent_cosine_similarity: Test trigger similarity via HuggingFace and Infersent
+- location_recognition: Location recognition for weather
+- many_intent_classifier: Trying to classify lots of intents at a time
+- qa_context_evaluation: Tests using qa models for context
+- shopping_classifier: Finds shopping items mentioned
+
 ### Running the notebooks
 Download Glove for word embeddings
 ```sh
